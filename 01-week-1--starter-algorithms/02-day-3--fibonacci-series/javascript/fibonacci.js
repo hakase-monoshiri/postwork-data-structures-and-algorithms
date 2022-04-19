@@ -1,5 +1,25 @@
 function fibonacci(num) {
-  // type your code here
+  let two_prev = 0
+  let prev = 1
+  let current = 0
+  
+  switch (num) {
+
+  case 0 :
+    return 0
+  case 1 :
+    return 1
+  default:
+
+    for (i = 1; i < num; i++) {
+      current = two_prev + prev;
+      two_prev = prev;
+      prev = current;
+    }
+
+    return current 
+  }
+
 }
 
 if (require.main === module) {

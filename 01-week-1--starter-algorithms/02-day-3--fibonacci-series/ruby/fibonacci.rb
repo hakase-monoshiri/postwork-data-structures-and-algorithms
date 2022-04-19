@@ -1,23 +1,27 @@
 def fibonacci(num)
   # type your code in here
-  2_prev = 0
+  two_prev = 0
   prev = 1
   current = 0
   
   case num
-    when 0
-      return 0
-    when 1
-      return 1
-    else
-      while i < num
-        current = 2_prev + prev
-        2prev = prev
-        prev = current
-        i++
-      end
-      return current
+
+  when 0
+    return 0
+  when 1
+    return 1
+  else
+
+    i = 0
+    while i < num do
+      current = two_prev + prev
+      two_prev = prev
+      prev = current
+      i++
     end
+
+    return current
+  end
 
 end
 
@@ -46,8 +50,3 @@ end
 #zero step is zero
 # first step is 1
 # everyt step after is previous steps added
-
-puts fibonacci(0)
-puts fibonacci(1)
-puts fibonacci(2)
-puts fibonacci(8)
