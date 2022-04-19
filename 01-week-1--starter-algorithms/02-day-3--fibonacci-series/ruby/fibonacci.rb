@@ -12,12 +12,12 @@ def fibonacci(num)
     return 1
   else
 
-    i = 0
-    while i < num do
+    i = 1
+    while i < num
       current = two_prev + prev
       two_prev = prev
       prev = current
-      i++
+      i+=1
     end
 
     return current
