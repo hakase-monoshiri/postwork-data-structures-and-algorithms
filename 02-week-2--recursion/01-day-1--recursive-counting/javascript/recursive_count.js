@@ -1,5 +1,12 @@
 function recursiveCount(num = 0) {
   // type your code here
+  console.log(num);
+  num++;
+
+  if (num >= 10) {
+    return
+  }
+  recursiveCount(num)
 }
 
 if (require.main === module) {
