@@ -1,5 +1,29 @@
 function balancingParentheses(string) {
   // type your code here
+  chars = string.split('');
+
+  openPars = 0
+  missingPairs = 0
+
+  for (let i = 0; i < string.length; ++i ) {
+
+   const char = string[i];
+
+    if ( char === '(' ) {
+      ++openPars;
+      continue;
+    }
+
+    if ( openPars > 0 ) {
+      --openPars;
+    }
+    else {
+      ++missingPairs;
+    }
+  };
+
+  return openPars + missingPairs;
+
 }
 
 if (require.main === module) {
