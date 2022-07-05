@@ -1,5 +1,21 @@
 def distinct_pair_sum(arr, k)
   # type your code in here
+  i = 0
+  j = 1
+
+  pairs = []
+
+  while j < arr.length
+
+    if arr[i] + arr[j] == k
+      pairs << [ arr[i], arr[j] ].sort
+    end
+
+    i += 1
+    j += 1
+  end
+
+  pairs.uniq
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -18,3 +34,4 @@ end
 
 # Please add your pseudocode to this file
 # And a written explanation of your solution
+
