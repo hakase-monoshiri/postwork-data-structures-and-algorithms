@@ -1,5 +1,27 @@
 function rotateArray(arr, k) {
   // type your code here
+
+  const newArr = [];
+
+  let newIdx = 0
+  let shiftValue = k
+
+  if (k > arr.length) {
+    shiftValue = k % arr.length
+  }
+  
+  for (  let idx = 0; idx < arr.length; idx++) {
+    if (idx + shiftValue < arr.length) {
+      newIdx = idx + shiftValue
+    }
+    else {
+      newIdx = shiftValue + idx - arr.length
+    }
+    
+    newArr[newIdx] = arr[idx]
+  }
+
+  return newArr;
 }
 
 if (require.main === module) {
