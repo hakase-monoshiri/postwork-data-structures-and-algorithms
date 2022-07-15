@@ -1,5 +1,24 @@
 def consecutive_substrings(string)
   # type your code in here
+  memo = []
+
+  string.chars.each do |char|
+    memo << char
+
+    other_chars = string.chars[(string.index(char) + 1) ..-1]
+
+    fragment = char
+
+    other_chars.each do |next_char|
+    
+      fragment += next_char
+      memo << fragment
+    end
+
+  end
+
+
+  memo
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -18,3 +37,4 @@ end
 
 # Please add your pseudocode to this file
 # And a written explanation of your solution
+
